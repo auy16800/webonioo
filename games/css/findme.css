@@ -1,0 +1,57 @@
+.container{
+    margin: auto;
+    position: relative;
+    height: 750px;
+    width: 520px;
+    border: 2px solid rebeccapurple;
+    background: url('../../img/background.jpg') no-repeat;
+    
+}
+
+#gamestart{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid purple;
+    display: none;
+}
+
+#start{
+    position: absolute;
+    top: 500px;
+    left: 230px;
+    border: 1px solid red;
+    cursor: pointer;
+    background-color: rgb(48, 106, 129);
+    color: #ffffff;
+    display: block;
+}
+#gameEnter{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border:1px solid red;
+    
+}
+#myPlane{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 245px;
+    top: 650px;
+}
+#bullet,#enemys{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.b{
+    /* 从飞机头顶发射 */
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    left: 245px;
+    top: 625px;
+}

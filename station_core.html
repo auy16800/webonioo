@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑纸屋</title>
+    <script src="js/vue.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+    <!-- <script src="./plugs/elementui/index.js"></script> -->
+    <link rel="stylesheet" href="./css/bka_station_core.css">
+    <!-- <link rel="stylesheet" href="./plugs/elementui/index.css"> -->
+    <!-- <link rel="stylesheet" href="./plugs/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./plugs/reset.css">
+</head>
+
+<body>
+
+
+
+    <div id="app">
+        <!-- 导航 -->
+        <div class="headerpage"></div>
+        <!-- 
+            当前登录人员信息
+            签到：
+            回复内容：
+            新关注：
+            私信：
+        -->
+
+        <div class="main">
+            <div class="up-data">
+                <!-- 板块稿二/稿3——做成游戏名次/五个人-大概 -->
+                <div id="user-box">
+                    <!-- 用户头像盒子 -->
+                    <span id="user-icon"></span><span class="last-logintime">上次登录时间：2020/20/20</span>
+                    <div class="regi">签到:观察者bka151364</div>
+                    <ul class="basic-case">
+                        <li>收到回复：</li>
+                        <li>新关注：<span>？</span></li>
+                        <li>私信：<span>？</span></li>
+                        <li>足迹:</li>
+                        <li>单词击中数:</li>
+                        <li>排名:</li>
+                    </ul>
+                </div>
+
+                <!-- 轮播图Game卡片，上面是轮播图，下面是内容介绍，包含ReadMe进入页面 -->
+                <div class="game-show">
+                    <div class="banner">
+
+                    </div>
+                    <!-- 按键 分类按钮-->
+                    <!-- <ul class="ranking">
+                        <li>
+                            <div id="user-icon-minin"></div>
+                            <div class="rank-nickName" id="nickName">nickName</div>
+                            <div class="rank-score" id="rank_score">99分</div>分
+                            <div class="rank-game" id="rank_game">黑纸屋</div>
+                        </li>
+                    </ul> -->
+
+                    <table class="ranking">
+                        <thead>
+                            <tr>
+                                <th>玩家</th>
+                                <th>名称</th>
+                                <th>分值</th>
+                                <th>游戏名</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="ranking-data" v-for="r in rankList">
+                                <td>
+                                    <div class="user-icon-min">
+                                        {{r.userFace}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="rank-nickName" id="nick_name">
+                                        {{r.nickName}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="rank-score">
+                                        {{r.rankScore}}分
+                                    </div>
+                                </td>
+                                <!-- 还有一个排名，忘了 -->
+                                <td>
+                                    <div class="rank-game">
+                                        {{r.gameName}}
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- 板块box -->
+            <div class="middle-data">
+                <div class="realtime-Box">
+                    <!-- 实时数据  压缩一行-->
+                    <div class="realtime-data">
+                        <div class="yesterdayPostings ">昨日帖子 <i class="icon ion-arrow-right-b"></i>
+                            <span>16800</span></div>
+                        <div class="yesterdayActive">昨日活跃 <i class="icon ion-arrow-right-b"></i> <span>16800</span>
+                        </div>
+                        <div class="nowActive">今天活跃 <i class="icon ion-arrow-right-b"></i> <span>16800</span></div>
+                        <div class="nowPostings ">今日帖子 <i class="icon ion-arrow-right-b"></i> <span>16800</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 热门回复模块 -->
+                <div class="hot-rep">
+                    <div class="trumpet-core">
+                        <div class="trumpet"> 小喇叭 <i class="icon ion-speakerphone"></i></div>
+                        <div class="publish-mouse"><i class="icon ion-compose"></i> 发布内容</div>
+                    </div>
+                    <div class="hot-subject">
+                        <table>
+                            <tbody>
+                                <tr class="tr-test">
+                                    <td class="user-icon-min">po</td>
+                                    <td class="rank-nickName">Lorem</td>
+                                    <td class="trumpet-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+                                    <td class="last-publishTime">0920/20:53</td>
+                                </tr>
+
+                                <tr class="tr-test">
+                                    <td class="user-icon-min">on</td>
+                                    <td class="rank-nickName">测试中文字体</td>
+                                    <td class="trumpet-content">Odit magni reiciendis officia sequi non suscipit possimus harum.</td>
+                                    <td class="last-publishTime">0920/07:31</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="user-icon-min">vc</td>
+                                    <td class="rank-nickName">Maiores</td>
+                                    <td class="trumpet-content">nisi nostrum officiis ipsum quaerat incidunt reprehenderit repudiandae libero.</td>
+                                    <td class="last-publishTime">0920/05:29</td>
+                                    <!-- <div class="linecut">========================</div></div>   -->
+                                </tr>
+                                <tr>
+                                    <td class="user-icon-min">vc</td>
+                                    <td class="rank-nickName">Maiores</td>
+                                    <td class="trumpet-content">nisi nostrum officiis ipsum quaerat incidunt reprehenderit repudiandae libero.</td>
+                                    <td class="last-publishTime">0920/05:29</td>
+                                    <!-- <div class="linecut">========================</div></div>   -->
+                                </tr>
+                                <tr>
+                                    <td class="user-icon-min">vc</td>
+                                    <td class="rank-nickName">Maiores</td>
+                                    <td class="trumpet-content">nisi nostrum officiis ipsum quaerat incidunt reprehenderit repudiandae libero.</td>
+                                    <td class="last-publishTime">0920/05:29</td>
+                                    <!-- <div class="linecut">========================</div></div>   -->
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <!-- 核心内容区域 -->
+                <div class="content-core">
+                    <!-- 条目内容区域 -->
+                    <ul class="topics-items">
+                        <li class="topics-list" v-for="t in topicList">
+                            <div class="left-area">
+                                <div id="user-icon">{{postIcon}}</div>
+                            </div>
+                            <div class="right-area">
+                                <div class="publish-info">
+                                    <!-- 上方title -->
+                                    <div class="pubinfo-top">
+                                        <div class="post-title" id="postId">{{t.title}}</div>
+
+                                        <div class="pagination" id="pagination"><i class="icon ion-android-bookmark"></i>
+                                            <!-- 需要递归页码 中间+空字符串 " " -->
+                                            1 2 3 4 5 6 7 8 9 10 ... 12
+                                        </div>
+
+                                        <div class="report"><i class="icon ion-nuclear"></i></div>
+                                    </div>
+
+                                    <!-- 下方其他内容 -->
+                                    <div class="pubinfo-bottom">
+                                        <!-- pubinfo-bottom 以下div样式一致 -->
+                                        <div class="pubtop">
+                                            <div class="pubinfo-nickname">楼主：<span id="nick_name">{{t.postName}}</span>
+                                            </div>
+                                            <div class="pubinfo-date" id="topic_date">{{t.topicDate}}</div>
+
+                                        </div>
+                                        <!-- 如果最后回复为空 -->
+                                        <div class="pubbot">
+                                            <div class="visit-info"><i class="icon ion-chatbox-working"></i> <span id="reply_count">{{t.replyCount}}</span> / <span id="examine-count">{{t.examineCount}}</span> <i class="icon ion-ios-eye"></i>
+                                            </div>
+                                            <div class="last-pub-date" id="reply_date">{{t.replyDate}}</div>
+                                            <div class="last-reply">最后回复用户: <span id="reply_nick_name">{{t.replyName}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- 还有一个自己的页面，集中单词数量和内容 -->
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "由Vue返回的nickName数据",
+                rankList: [{
+                    userFace: "SRC://",
+                    nickName: "呆瓜",
+                    rankScore: "1258",
+                    gameName: "黑纸屋"
+                }, {
+                    userFace: "SRC://",
+                    nickName: "番茄",
+                    rankScore: "14521",
+                    gameName: "黑纸屋"
+                }, {
+                    userFace: "SRC://",
+                    nickName: "不知名的流浪汉",
+                    rankScore: "6781",
+                    gameName: "黑纸屋"
+                }, {
+                    userFace: "SRC://",
+                    nickName: "观察者CFUCA2208",
+                    rankScore: "23156",
+                    gameName: "黑纸屋"
+                }, ],
+
+                topicList: [{
+                        postIcon: "",
+                        postId: "",
+                        topicId: "",
+                        title: "测试数据标题",
+                        postName: "小绵羊",
+                        replyName: "黄瓜",
+                        topicDate: "20150506:1905",
+                        replyDate: "20150506:1905",
+                        replyCount: "125",
+                        examineCount: "1214",
+                    }
+
+                ]
+            },
+            methods: {
+                // 同步主页数据
+                /*
+                    up-data用户模块组
+                    game-show轮播图组
+                    ranking排名组
+                    realtime-data昨日和实时数据组
+                    trumpet小喇叭组
+                    topics-items条目list
+                */
+                //    前端axios连接池，防止new浪费
+                // syncPageData() {
+                // var ugrrtAxios = [];
+                // 根据登录id显示内容
+                //如果未登录跳过验证
+                // var upDate = axios({
+                //     url:"",
+                //     method:"post",
+                //     data:{
+
+                //     }
+                // }).then(res => {
+
+                // }),
+
+
+
+                // var upDate = axios({
+
+                // }),
+                // var upDate = axios({
+
+                // }),
+                // var upDate = axios({
+
+                // }),
+
+                // },
+                // },
+                // created() {
+                // syncPageData();
+            }
+        })
+
+
+
+        $(".headerpage").load("header.html");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bka_publish.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../plugs/reset.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../plugs/wangEditor/release/wangEditor.min.js"></script>
+
+    <title>文本域</title>
+</head>
+
+
+<body>
+    <div class="headerpage"></div>
+
+    <div class="publish-container">
+        <div class="top-title">
+            <span class="title-name">标 ♂ 题</span>
+            <input type="text" id="title" class="titlecss" placeholder="输入标题">
+        </div>
+
+        <!--  -->
+
+        <div class="text-content">
+            <!-- <div id="editor">
+
+            </div> -->
+
+            <div id="toolbar" class="toolbar"></div>
+            <div style="padding: 1px 0"></div>
+            <div id="textx" class="text">
+                <!--可使用 min-height 实现编辑区域自动增加高度-->
+                <!-- <p>请输入内容</p> -->
+            </div>
+
+
+        </div>
+
+
+        <!--  -->
+        <div class="bottom-butten">
+            <div id="publishContext" class="leftbtn">发布内容</div>
+            <div id="rightbtnclose" class="rightbtnclose">关闭页面</div>
+            <div id="#" class="rightbtn">建议</div>
+        </div>
+
+        <!--  -->
+        <div class="umika-standard">
+            <div>严禁发布违反国家相关法律法规的视频及内容。 对违法违规行为及内容的界定依照现行法律法规，包含但不限于《中华人民共和国保守国家秘密法》、《中华人民共和国网络安全法》、《互联网信息服务管理办法》、《中华人民共和国电子签名法》、《中华人民共和国计算机信息系统安全保护条例》《互联网用户账号名称管理规定》等，在平台内严禁发布、传播、分享的任何内容。
+            </div>
+            <div>用户之间因使用onioo社区而产生或可能产生的任何纠纷和/或损失，由用户自行解决并承担相应的责任。</div>
+            <div>互联网论坛社区服务提供者开展经营和服务活动，必须遵守法律法规，尊重社会公德，遵守商业道德，诚实信用，承担社会责任。</div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(".headerpage").load("../header.html");
+        var E = window.wangEditor
+        var editor = new E('#toolbar', '#textx')
+            // 或者 var editor = new E( document.getElementById('editor') )
+        editor.create()
+
+        document.getElementById('publishContext').addEventListener('click', function() {
+            // 读取 html
+            alert(editor.txt.html())
+        }, false)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+#header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    /* background-color: gray; */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    position: relative;
+    color: white;
+    /* opacity: 0.5; */
+}
+
+.top-contain {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* logo */
+
+.left-logo {
+    display: block;
+}
+
+.top-contain a {
+    text-decoration: none;
+    color: rgb(10, 39, 49);
+    font-size: 17px;
+    display: block;
+    margin-left: 8px;
+    color: white;
+}
+
+
+/* left daohanglan */
+
+.left-topbar,
+#header li {
+    float: left;
+}
+
+.shop-cart,
+.user-info {
+    float: right;
+}

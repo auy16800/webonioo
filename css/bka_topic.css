@@ -1,0 +1,17 @@
+body {
+    background: url(../../img/bgc1.jpg) no-repeat;
+    background-attachment: fixed;
+}
+
+.topic-box,
+.reply-box {
+    position: relative;
+    /*  */
+    margin: 10px auto;
+    width: 1200px;
+    border: 1px red solid;
+    height: 500px;
+    background-color: rgb(233, 230, 230);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}

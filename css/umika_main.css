@@ -1,0 +1,74 @@
+body{
+    /* 外边距 */
+    margin: 0;
+    /* 内边距 */
+    padding: 0;
+    /* background-color: #00C7F0; */
+    /* font-size: 20px; */
+}
+
+#menu{
+    /* 外边距 */
+    margin: 0;
+    /* 内边距 */
+    padding: 0;
+    /* background-color:gray; */
+    margin-top: 50px;
+}
+
+#menu li{
+    list-style: none;
+    
+    display: inline-block;
+}
+
+#menu li a{
+    /* 设置元素的文本修饰：underline 为下划线 */
+    text-decoration:none;
+
+    /* 生成相对定位的元素，相对于其正常位置进行定位。 relative */
+    position: relative;
+    color: #051b1b;
+    font-size: 25px;
+    /* 粗细 */
+    font-weight: 350;
+    /* 字体 */
+    font-family: sans-serif;
+
+    display: block;
+    /* overflow 属性规定当内容溢出元素框时发生的事情  hidding内容会被修剪，并且其余内容是不可见的。。 */
+    overflow: hidden;
+    /* 延迟 */
+    transition: 0.5s all;
+    padding: 14px 20px;
+    /* 文本居中 */
+    text-align: center;
+    /* 文版转换，大写，并没有什么用 */
+    text-transform: uppercase;
+    
+
+}
+
+#menu li a:before{
+
+    content: '';
+    width: 60px;
+    /* 绝对定位元素 */
+    position: absolute;
+
+    /* 设置下边框的样式 */
+    border-bottom: 8px solid #0FD646;
+    /* 把xx的底边缘设置在其包含元素底边缘之上 5 像素高的位置 */
+    bottom: 5px;
+    right:300px;
+    transition: 0.7s all;
+    
+}
+
+
+#menu li a:hover:before{
+    /* 选择鼠标指针浮动在其上的元素，并设置其样式： */
+    right: 0;
+    /* background-color: honeydew; */
+}
+

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#gameType{
+    /* width: 652px; */
+    /* height: 430px; */
+    width: 600px;
+    height: 800px;
+    /* background: url(../../img/morinuo.jpg) no-repeat; */
+    margin: 50px auto;
+    /* 绝对定位 */
+    position: relative;
+}
+
+/* 游戏——界面 */
+#gamestart{
+    /* 从父元素拿到宽高 */
+    width: 100%;
+    height: 100%;
+    background: url(../../img/morinuo.jpg) no-repeat;
+    /* 游戏界面，隐藏 */
+    /* display: none; */
+}
+
+
+/* 游戏——内界面 */
+#game{
+    /* 首先隐藏 */
+    width: 100%;
+    height: 100%;
+    border: 1px solid #666666;
+    display: none;
+    /* 进入游戏界面 */
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+#start,#discriable{
+    width: 80px;
+    height: 40px;
+    /* border:1px solid hotpink; */
+    /* 绝对定位 */
+    position: absolute;
+    cursor: pointer;
+}
+#start{
+    left: 33px;
+    bottom: 60px;
+}
+#discriable{
+    left: 515px;
+    bottom: 93px;
+}
+
+
+/* 点击设置之后选择游戏难度 */
+#sel{
+    /* display: none; */
+    width: 140px;
+    height: 60px;
+    border: 1px solid red;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    background-color: #fff;
+    display: none;
+
+}
+
+/* 下拉菜单 */
+#sel select{
+    width: 60px;
+    height: 30px;
+    /* 选择框内元素位置 */
+    text-indent: 12px;
+    margin-left: 40px;
+    margin-top: 15px;
+    
+}
+
+/* 关闭框，点击后关闭 */
+#close{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+
+/* 打字的正确率和速度放到 右上角 */
+#tie{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* border: 1px solid red; */
+    width: 150px;
+    line-height: 30px;
+    padding: 5px 10px;
+
+}
+
+
+/*操作按钮  放到左下角 */
+#operta{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* border: 1px solid #666; */
+    width: 100px;
+    height: 100px;
+
+}
+#operta span{
+    width: 40px;
+    height: 40px;
+    /* 自始居中 */
+    text-align: center;
+    /* 转成行内元素！！！ */
+    display: inline-block;
+    /* 垂直居中 */
+    line-height: 40px;
+    /* 圆角 */
+    border-radius: 50%;
+    /* 鼠标移动到单词上，可以看到鼠标指针发生变化 */
+    cursor: pointer;
+    /* border: 1px solid red; */
+    position: absolute;
+    background-color: royalblue;
+    color: #fff;
+    font-weight: bolder;
+}
+
+#operta span:hover{
+    background-color: seagreen;
+}
+
+#operta span:nth-child(1){
+    left: 0;
+    top: 30px;
+}
+#operta span:nth-child(2){
+    left: 30px;
+    top: 0px;
+}
+#operta span:nth-child(3){
+    left: 30px;
+    bottom: 0;
+}
+#operta span:nth-child(4){
+    top: 30px;
+    right: 0;
+}
+
+#des{
+
+    position: absolute;
+    /* margin-top: 50%; */
+    width: 250px;
+    height: 380px;
+    border: 1px solid red;
+    background-color: #fff;
+    box-sizing: border-box;
+    left: 100px;
+    top: 100px;
+    line-height: 15px;
+    padding: 30px;
+    display: none;
+}
+#cls1{
+    position: absolute;
+    border: 1px solid red;
+    /* left: 260px;
+    top: 105px; */
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: #fff;
+    font-weight: border;
+    display: none;
+} 
+.active{
+    position: absolute;
+    top: -30px;
+    /* left: 30px; */
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid #666; */
+    border-radius: 50%;
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 30px;
+    /* background-color: skyblue; */
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+}

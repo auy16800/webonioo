@@ -1,0 +1,570 @@
+/* Contains style development for ElementUI , The prefix for 'auy-'or'bka-' 2020/09/06*/
+
+body {
+    /* background-color: #e6ecf5; */
+    /* background: url(../img/？？？？) no-repeat; */
+    /* background-color: rgba(192, 187, 187, 0.678); */
+    background: url(../img/bgc1.jpg) no-repeat;
+    background-attachment: fixed;
+}
+
+.up-data .middle-data .hot-rep {
+    width: 100%;
+}
+
+
+/* 上方内容区域 & 主内容区域 */
+
+.middle-data,
+.up-data {
+    border: 1px solid black;
+}
+
+
+/*用户信息模块  游戏内容  热门内容  核心区域 */
+
+#user-box,
+.game-show,
+.hot-rep,
+.content-core,
+.realtime-Box {
+    border: 1px solid tomato;
+    /* TEST SOLID */
+    border-radius: 8px;
+    background-color: #ECECEE;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+
+/* 相对定位模块 */
+
+.main,
+.up-data,
+.middle-data,
+.hot-rep,
+.content-core {
+    position: relative;
+}
+
+
+/* 绝对定位模块 */
+
+
+/* 用户头像 */
+
+#user-icon {
+    margin: 0 auto;
+    margin-top: 5px;
+    display: block;
+    /* border: 1px solid red; */
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/poto.png) no-repeat;
+}
+
+
+/* 主内容区域 */
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 上方内容模块 */
+
+.up-data {
+    height: 260px;
+    margin-top: 20px;
+}
+
+
+/* 中部内容盒子 */
+
+.middle-data {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 500px;
+}
+
+
+/* 用户消息区 */
+
+#user-box {
+    /* border-radius: 20px; */
+    width: 320px;
+    height: 260px;
+    background-color: "#545c64";
+    position: absolute;
+}
+
+
+/* 游戏盒子 */
+
+.game-show {
+    /* border-radius: 30px; */
+    /* float: right; */
+    width: 820px;
+    height: 260px;
+    right: 0;
+    /* top: -260px; */
+    position: absolute;
+}
+
+
+/* 左侧排名 ranking */
+
+.ranking,
+.banner {
+    top: 10px;
+    position: absolute;
+}
+
+.ranking {
+    height: 240px;
+    width: 400px;
+    /* border: 1px solid red; */
+    left: 8px;
+}
+
+
+/* 以下都会删除（测试使用） */
+
+.ranking thead {
+    /* TEST SOLID */
+    border: 1px solid red;
+}
+
+.ranking tbody {
+    /* TEST SOLID */
+    border: 1px solid red;
+}
+
+.ranking tbody td {
+    /* TEST SOLID */
+    border: 1px solid red;
+    text-align: center;
+}
+
+.ranking tbody td:nth-child(2) {
+    text-align: left;
+}
+
+.user-icon-min,
+.rank-nickName,
+.rank-score,
+.rank-game {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 25px;
+    /* TEST SOLID */
+    /* border: 1px solid red; */
+    line-height: 25px;
+}
+
+
+/* Rank表头像 */
+
+.user-icon-min {
+    width: 25px;
+    border-radius: 25px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+/* Rank表昵称 */
+
+
+/* .rank-nickName{
+    
+} */
+
+
+/* Rank表得分 */
+
+
+/* .rank-score{
+
+} */
+
+
+/* Rank表游戏名称 */
+
+.rank-game {
+    cursor: pointer;
+}
+
+
+/* .ranking li{
+    margin-bottom: 4px;
+    height: 25px;
+    border: 1px solid red;
+    border-radius: 3px;
+} */
+
+
+/* 游戏盒子  （右侧轮播图 */
+
+.banner {
+    width: 360px;
+    height: 240px;
+    border: 1px solid red;
+    /* background-color: brown; */
+    top: 10px;
+    right: 8px;
+}
+
+
+/* 热门回复模块 */
+
+.hot-rep {
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+
+/* 小喇叭 */
+
+.trumpet-core {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #e9e6e6;
+}
+
+.trumpet {
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.publish-mouse {
+    width: 80px;
+    height: 15px;
+    position: absolute;
+    font-size: 12px;
+    top: 17px;
+    left: 130px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 6px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.realtime-Box {
+    margin-bottom: 10px;
+}
+
+
+/* 热门模块下的实时数据栏目 */
+
+.realtime-data {
+    top: 5px;
+    height: 40px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.realtime-data div {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(168, 161, 168);
+    color: rgba(241, 239, 231, 0.904);
+    border-radius: 5px;
+    line-height: 30px;
+    box-shadow: 2px 2px 20px rgba(36, 23, 23, 0.3);
+}
+
+.realtime-data div:hover {
+    background-color: rgb(216, 161, 161);
+    cursor: default;
+}
+
+.yesterdayPostings,
+.yesterdayActive,
+.nowActive,
+.nowPostings {
+    position: absolute;
+}
+
+.yesterdayPostings {
+    left: 5px;
+}
+
+.yesterdayActive {
+    left: 190px;
+}
+
+.nowActive {
+    right: 190px;
+}
+
+.nowPostings {
+    right: 5px;
+}
+
+
+/* 小喇叭内容区域 */
+
+.hot-subject {
+    position: relative;
+    border: 1px solid red;
+    height: 90px;
+    overflow: scroll;
+}
+
+.hot-subject tbody {
+    position: relative;
+    /* border: 2px solid black; */
+}
+
+
+/* .hot-subject {
+    overflow: scroll;
+} */
+
+.hot-subject tbody td {
+    /* border: 1px solid red; */
+    height: 30px;
+    vertical-align: middle;
+    font-size: 13px;
+    border-bottom: 1px dashed rgb(163, 161, 161);
+}
+
+.rank-nickName,
+.trumpet-content {
+    padding-left: 3px;
+}
+
+
+/* 线条 */
+
+.lintcut {
+    position: relative;
+    top: 0px;
+    display: none;
+}
+
+.hot-subject table {
+    width: 99%;
+    margin: 3px 3px 3px 3px;
+}
+
+.hot-subject .rank-nickName {
+    font-weight: 600;
+}
+
+.last-publishTime {
+    text-align: right;
+    padding-right: 2px;
+}
+
+.tr-test .linecut:only-child {
+    background: orange;
+}
+
+
+/* 
+.user-icon-min
+
+.trumpet-content
+
+*/
+
+
+/* 内容区 */
+
+.content-core {
+    position: relative;
+}
+
+.topics-items {
+    height: 600px;
+}
+
+.topics-items:not(:first-child) {
+    margin-top: 7px;
+}
+
+
+/* 帖子展示列表 */
+
+.topics-list {
+    position: relative;
+    margin: 2px 3px 5px 3px;
+    height: 80px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+}
+
+.topics-list:hover {
+    background-color: rgb(255, 255, 254);
+    box-shadow: 2px 2px 10px rgba(102, 104, 226, 0.3);
+}
+
+
+/* 左右区域 */
+
+.left-area,
+.right-area,
+.left-area #user-icon {
+    position: absolute;
+}
+
+.left-area,
+.right-area {
+    height: 70px;
+    top: 5px;
+}
+
+.left-area {
+    background-color: rgb(255, 255, 254);
+    width: 70px;
+    left: 5px;
+    border-radius: 50px;
+}
+
+.left-area #user-icon {
+    left: 10px;
+    top: 5px;
+}
+
+.right-area {
+    left: 90px;
+    right: 2px;
+    margin: 0px 2px 0px 5px;
+    border-radius: 5px;
+}
+
+
+/* 下方帖子信息 */
+
+.pubinfo-top,
+.pubinfo-bottom {
+    position: absolute;
+}
+
+
+/* 上方内容 */
+
+.pubinfo-top {
+    width: 100%;
+    height: 40px;
+    /* background-color: red; */
+}
+
+.post-title,
+.pagination {
+    margin-left: 12px;
+    line-height: 40px;
+    float: left;
+}
+
+.post-title {
+    text-align: left;
+    font-size: 17px;
+}
+
+.pagination {
+    word-spacing: 5px;
+    /* letter-spacing: 5px; */
+    font-size: 13px;
+}
+
+
+/* 反馈 */
+
+.pubinfo-top div {
+    cursor: pointer;
+}
+
+.report {
+    margin-right: 12px;
+    line-height: 40px;
+    float: right;
+}
+
+
+/* 下方内容 */
+
+.pubinfo-bottom {
+    /* position: relative; */
+    top: 40px;
+    height: 30px;
+    width: 100%;
+    /* background-color: orange; */
+}
+
+.pubinfo-bottom div {
+    color: rgb(39, 36, 36);
+}
+
+.pubinfo-bottom i {
+    font-size: 11px;
+    /* color: rgb(111, 80, 221); */
+}
+
+
+/* 下面行 */
+
+
+/* box-shadow: 0px 0px 10px rgba(153, 146, 146, 0.3); */
+
+.post-title,
+.pagination,
+.report,
+.pubinfo-nickname,
+.pubinfo-date,
+.last-reply,
+.last-pub-date,
+.visit-info {
+    box-shadow: 0px 0px 1px rgba(153, 146, 146, 0.3);
+    /* outline: 1px solid red; */
+}
+
+.pubtop {
+    float: left;
+}
+
+.pubbot {
+    float: right;
+}
+
+#nick_name,
+#reply_nick_name {
+    cursor: pointer;
+}
+
+.pubinfo-nickname,
+.pubinfo-date,
+.last-reply,
+.last-pub-date,
+.visit-info {
+    line-height: 30px;
+}
+
+.pubinfo-nickname,
+.pubinfo-date {
+    margin-left: 12px;
+    float: left;
+}
+
+.last-pub-date,
+.last-reply,
+.visit-info {
+    float: right;
+}
+
+.last-pub-date,
+.last-reply {
+    margin-right: 20px;
+}
+
+.visit-info {
+    margin-right: 12px;
+}

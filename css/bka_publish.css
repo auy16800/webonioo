@@ -1,0 +1,135 @@
+/* 文本域内容区域 */
+
+body {
+    background: url(../img/bgc1.jpg) no-repeat;
+    background: url(../../img/bgc1.jpg) no-repeat;
+    background-attachment: fixed;
+}
+
+.publish-container {
+    position: relative;
+    margin: 10px auto;
+    width: 1200px;
+    height: 800px;
+    /* border: 1px red solid; */
+    background-color: rgb(233, 230, 230);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+.title-name,
+.titlecss {
+    position: relative;
+    height: 30px;
+    background-color: #FFFFFF;
+}
+
+.title-name {
+    top: 20px;
+    font-size: 30px;
+    left: 10px;
+}
+
+.titlecss {
+    top: 20px;
+    width: 1000px;
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 20px rgba(0, 0, 0, .2); */
+    /* left: 15px; */
+    float: right;
+    right: 15px;
+}
+
+.top-title,
+.text-content,
+.bottom-butten,
+.umika-standard {
+    top: 15px;
+    position: relative;
+    /* border: 1px black solid; */
+    width: 1175px;
+    left: 15px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    right: 15px;
+}
+
+
+/* title栏 */
+
+.top-title {
+    margin-top: 8px;
+    height: 80px;
+}
+
+
+/* 文本域栏 */
+
+#textx {
+    height: 300px;
+}
+
+.text-content {
+    margin-top: 15px;
+}
+
+
+/* 双侧按纽栏 */
+
+.bottom-butten {
+    margin-top: 15px;
+    height: 100px;
+}
+
+.leftbtn,
+.rightbtnclose,
+.rightbtn {
+    border-radius: 5px;
+}
+
+.leftbtn {
+    float: left;
+    margin-left: 15px;
+}
+
+.rightbtn,
+.rightbtnclose {
+    float: right;
+    margin-right: 15px;
+}
+
+.bottom-butten div {
+    margin-top: 30px;
+    /* border: 1px red solid; */
+    width: 150px;
+    height: 30px;
+    background-color: rgb(168, 161, 168);
+    color: rgba(241, 239, 231, 0.904);
+    border-radius: 5px;
+    line-height: 30px;
+    box-shadow: 2px 2px 20px rgba(36, 23, 23, 0.3);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bottom-butten div:hover {
+    background-color: rgb(104, 112, 190);
+    cursor: pointer;
+}
+
+
+/* 标规栏 */
+
+.umika-standard {
+    margin-top: 20px;
+    height: 200px;
+}
+
+.umika-standard div {
+    /* margin-top: 5px; */
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: red;
+}

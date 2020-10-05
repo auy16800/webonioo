@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umika</title>
+    <link rel="stylesheet" href="./css/umika_game.css">
+    <!-- <link rel="stylesheet" href="./css/animate.min.css"> -->
+    <script src="../js/umika.js"></script>
+    <!-- <script src="../js/jquery.min.js"></script> -->
+
+
+</head>
+<body>
+    <!-- 游戏界面 -->
+    <div id="gameType">
+        <!-- 游戏开始的界面 -->
+        <div id="gamestart">
+            <div id="start"></div>
+            <!-- 说明 -->
+            <div id="discriable"></div>
+            
+            <div id="des" class="Specials rollln">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quidem nisi ratione commodi debitis velit culpa vitae accusantium, voluptatem perferendis. 
+                Sint quo maiores aut aspernatur dolore commodi rerum vero voluptatibus libero!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem nisi ratione commodi debitis velit culpa vitae accusantium, voluptatem perferendis. 
+               Sint quo maiores aut aspernatur dolore commodi rerum vero voluptatibus libero!
+               <span id="cls1">Close Des</span>
+            </div>
+        </div>
+       
+            <div id="game">
+                <!-- 操作 按钮 -->
+                <div id="operta">
+                    <!-- 游戏暂停 -->
+                    <span class="st">开始</span>   
+                    <span class="exit">退出</span>
+                    <!-- 退出到游戏界面 -->
+                    <span class="esc">结束</span>
+                    <span class="set">设置</span>
+
+                </div>
+
+                <!-- 点击设置后  选择’ 游戏难度 -->
+                <div id="sel">
+                    <select name="" id="">
+                        <option value="slow">慢</option>
+                        <option value="middle">中</option>
+                        <option value="quick">快</option>
+                    </select>
+                    <!-- 弹出之后 需要一个关闭 -->
+                    <span id="close">关闭</span>
+                    
+                </div>
+
+                <!-- 提示打字的正确率和速度 -->
+                <div id="tie">
+                    <p>得分：<span>0</span>分</p>
+                    <p>正确率: <span>0%</span></p>
+                    <p>打字速度: <span>0 </span> 个/min</p>
+                </div>
+                <!-- test code -->
+                <!-- <span class="letter" id="letter">a</span> -->
+            </div>   
+    </div>
+
+
+
+
+
+
+</body>
+</html>
