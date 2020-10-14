@@ -2,7 +2,6 @@
 
 body {
     background: url(../img/bgc1.jpg) no-repeat;
-    background: url(../../img/bgc1.jpg) no-repeat;
     background-attachment: fixed;
 }
 
