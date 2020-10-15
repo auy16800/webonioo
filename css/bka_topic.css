@@ -9,10 +9,16 @@ body {
     /* background-attachment: fixed; */
 }
 
+.topic-main {
+    width: 870px;
+    margin: 0 auto;
+}
+
 .topic-box,
 .reply-box {
     /* position: relative; */
     /*  */
+    display: none;
     margin: 10px auto;
     width: 870px;
     border: 1px red solid;
@@ -29,7 +35,7 @@ body {
     position: relative;
     background-color: rgb(233, 230, 230);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 
@@ -48,7 +54,7 @@ body {
 .nick-name,
 .old-content,
 .middle-msg,
-.icon,
+.iconc,
 .sol-mk,
 .pubcont {
     margin-top: 3px;
@@ -66,7 +72,7 @@ body {
 
 .topic-user-Icon {
     position: relative;
-    left: 70px;
+    left: 89px;
     width: 120px;
     height: 120px;
     border-radius: 60px;
@@ -74,7 +80,7 @@ body {
     /* box-shadow: inside 5px 5px 20px rgba(92, 81, 81, 0.2); */
 }
 
-.icon {
+.iconc {
     position: relative;
     left: 9px;
     top: 6px;
@@ -82,6 +88,14 @@ body {
     height: 100px;
     border-radius: 60px;
     border: 1px solid rgb(221, 221, 221);
+}
+
+.nick-name {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: rgb(16, 141, 222);
 }
 
 
@@ -105,17 +119,12 @@ body {
 }
 
 
+/* .middle-msg td:hover {
+    background-color: black;
+} */
+
+
 /* 定义按钮 */
-
-.sol-mk {
-    /* position: relative; */
-    /* border: 1px red solid; */
-}
-
-.pubcont {
-    /* position: relative; */
-    /* border: 1px red solid; */
-}
 
 .sol-meg,
 .mk-frd,
@@ -156,4 +165,66 @@ body {
     margin-left: 20px;
     margin-top: 50px;
     background-color: rgb(126, 211, 197);
+}
+
+.old-topicbox {
+    position: relative;
+    top: 15px;
+    width: 300px;
+    height: 450px;
+    /* 500显示5跳，50留着分页 */
+}
+
+.old-item {
+    position: relative;
+    margin-bottom: 5px;
+    height: 65px;
+    width: 300px;
+    background-color: rgb(240, 182, 149);
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+
+/* .old-topicbox li:hover {
+    cursor: pointer;
+} */
+
+
+/* .old-topicbox .old-item i {} */
+
+.old-item i {
+    font-size: 12px;
+}
+
+.old-item .oltitle {
+    width: 260px;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    white-space: nowrap;
+    /* 不换行 */
+    overflow: hidden;
+    /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;
+}
+
+.postimebx,
+.viewnumbx,
+.replynumbx {
+    /* margin-top: 50px; */
+    border: red 1px solid;
+}
+
+.postime {
+    float: left;
+    margin-left: 15px;
+}
+
+.op-page {
+    margin-bottom: 5px;
+    height: 25px;
+    width: 300px;
+    background-color: rgb(140, 97, 219);
+    border-radius: 8px;
 }
